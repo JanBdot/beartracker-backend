@@ -24,13 +24,13 @@ public class BeartrackerBackendApplication {
         SpringApplication.run(BeartrackerBackendApplication.class, args);
     }
 
-    @Bean
-    ApplicationRunner applicationRunner(GreetingRepository greetingRepository) {
-        return args -> {
-            greetingRepository.save(new Greeting("Freda!"));
-            greetingRepository.save(new Greeting("Lucia!"));
-        };
-    }
+//    @Bean
+//    ApplicationRunner applicationRunner(GreetingRepository greetingRepository) {
+//        return args -> {
+//            greetingRepository.save(new Greeting("Freda!"));
+//            greetingRepository.save(new Greeting("Lucia!"));
+//        };
+//    }
 
     @Bean
     ApplicationRunner testRunner(BabyRepository babyRepository) {
