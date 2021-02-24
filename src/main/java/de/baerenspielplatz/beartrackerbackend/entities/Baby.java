@@ -1,5 +1,6 @@
-package baerenspielplatz.beartrackerbackend.entities;
+package de.baerenspielplatz.beartrackerbackend.entities;
 
+import baerenspielplatz.beartrackerbackend.entities.Measurement;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;

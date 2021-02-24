@@ -1,5 +1,7 @@
 package de.baerenspielplatz.beartrackerbackend;
 
+import de.baerenspielplatz.beartrackerbackend.entities.Baby;
+import de.baerenspielplatz.beartrackerbackend.repositories.BabyRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,8 +31,20 @@ public class BeartrackerBackendApplication {
             greetingRepository.save(new Greeting("Lucia!"));
         };
     }
-}
 
+    @Bean
+    ApplicationRunner testRunner(BabyRepository babyRepository) {
+        return args -> {
+            Baby baby1 = new Baby();
+            baby1.setName("testbaby1");
+            baby1.setBirthday(new Date());
+            babyRepository.save(baby1);
+        };
+    }
+}
+// #########################################
+// Testing Classes below
+// #########################################
 @RestController
 class HelloController {
 

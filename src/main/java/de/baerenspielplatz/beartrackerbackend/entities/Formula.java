@@ -1,4 +1,4 @@
-package baerenspielplatz.beartrackerbackend.entities;
+package de.baerenspielplatz.beartrackerbackend.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
