@@ -28,14 +28,14 @@ public class Baby {
 
     @OneToMany(mappedBy = "baby")
     private Set<Entry> entries = new HashSet<Entry>();
-
-    @Column(updatable = false, nullable = false)
-    @CreatedDate
-    private LocalDateTime createdTime;
-
-    @Column(nullable = false)
-    @LastModifiedDate
-    private LocalDateTime updatedTime;
+//
+//    @Column(updatable = false, nullable = false)
+//    @CreatedDate
+//    private LocalDateTime createdTime;
+//
+//    @Column(nullable = false)
+//    @LastModifiedDate
+//    private LocalDateTime updatedTime;
 
     public Baby() {
     }
@@ -56,21 +56,21 @@ public class Baby {
         this.name = name;
     }
 
-    public LocalDateTime getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(LocalDateTime createdTime) {
-        this.createdTime = createdTime;
-    }
-
-    public LocalDateTime getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(LocalDateTime updatedTime) {
-        this.updatedTime = updatedTime;
-    }
+//    public LocalDateTime getCreatedTime() {
+//        return createdTime;
+//    }
+//
+//    public void setCreatedTime(LocalDateTime createdTime) {
+//        this.createdTime = createdTime;
+//    }
+//
+//    public LocalDateTime getUpdatedTime() {
+//        return updatedTime;
+//    }
+//
+//    public void setUpdatedTime(LocalDateTime updatedTime) {
+//        this.updatedTime = updatedTime;
+//    }
 
     public Date getBirthday() {
         return birthday;
