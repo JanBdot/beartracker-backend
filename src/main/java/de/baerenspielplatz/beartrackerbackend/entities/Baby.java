@@ -23,11 +23,11 @@ public class Baby {
     @Column(nullable = false)
     private Date birthday;
 
-    @OneToMany(mappedBy = "baby")
-    private Set<Measurement> measurements = new HashSet<Measurement>();
-
-    @OneToMany(mappedBy = "baby")
-    private Set<Entry> entries = new HashSet<Entry>();
+//    @OneToMany(mappedBy = "baby")
+//    private Set<Measurement> measurements = new HashSet<Measurement>();
+//
+//    @OneToMany(mappedBy = "baby")
+//    private Set<Entry> entries = new HashSet<Entry>();
 
     @Column(updatable = false, nullable = false)
     @CreatedDate
@@ -78,13 +78,5 @@ public class Baby {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
-    }
-
-    public Set<Measurement> getMeasurements() {
-        return measurements;
-    }
-
-    public void setMeasurements(Set<Measurement> measurements) {
-        this.measurements = measurements;
     }
 }
