@@ -32,15 +32,15 @@ public class BeartrackerBackendApplication {
 //        };
 //    }
 
-    @Bean
-    ApplicationRunner testRunner(BabyRepository babyRepository) {
-        return args -> {
-            Baby baby1 = new Baby();
-            baby1.setName("testbaby1");
-            baby1.setBirthday(new Date());
-            babyRepository.save(baby1);
-        };
-    }
+//    @Bean
+//    ApplicationRunner testRunner(BabyRepository babyRepository) {
+//        return args -> {
+//            Baby baby1 = new Baby();
+//            baby1.setName("testbaby1");
+//            baby1.setBirthday(new Date());
+//            babyRepository.save(baby1);
+//        };
+//    }
 }
 // #########################################
 // Testing Classes below
