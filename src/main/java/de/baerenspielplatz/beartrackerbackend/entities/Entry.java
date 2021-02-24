@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
+@Table(name = "entries")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Entry {
 
@@ -13,7 +14,7 @@ public class Entry {
     private UUID id;
 
     @Column(nullable = false)
-    private Date date;
+    private Date _date;
 
     @ManyToOne
     private Baby baby;
@@ -33,11 +34,11 @@ public class Entry {
     }
 
     public Date getDate() {
-        return date;
+        return _date;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this._date = date;
     }
 
     public Baby getBaby() {
